@@ -17,5 +17,7 @@ int main()
 	int* boardPointer = board;
 	Game game = Game(boardPointer);
 	game.printBoard();
+	Solver s = Solver(&game);
+	s.simpleTest();
 	return 0;
 }
