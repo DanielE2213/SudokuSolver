@@ -18,6 +18,6 @@ int main()
 	Game game = Game(boardPointer);
 	game.printBoard();
 	Solver s = Solver(&game);
-	s.simpleTest();
+
 	return 0;
 }
