@@ -21,7 +21,6 @@ bool Solver::solve(Game g,int x, int y)
 		y = 0;
 		x++;
 	}
-	std::cout << g.getGame()[x][y] << std::endl;
 	if (g.getGame()[x][y] != 0)
 	{
 		return this->solve(g, x, y + 1);
