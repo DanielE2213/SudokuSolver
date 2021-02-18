@@ -13,6 +13,22 @@ Game::Game(int* arr)
     }
 }
 
+Game::Game(Game* g)
+{
+
+    std::vector<std::vector<int>> cp;
+    for (int i = 0; i < 9; i++)
+    {
+        cp.push_back(std::vector<int>());
+        for (int j = 0; j < 9; j++)
+        {
+            cp[i].push_back(g->game[i][j]);
+        }
+    }
+    this->game = cp;
+
+}
+
 Game::Game()
 {
     for (int i = 0; i < 9; i++)
@@ -50,7 +66,7 @@ void Game::printBoard()
 
 void Game::gameEdit(int x, int y, int num)
 {
-    if (x > 0 && x < 9 && y>0 && y < 9 && num>0 && num < 9)
+    if (x >= 0 && x < 9 && y>=0 && y < 9 && num>0 && num <= 9)
     {
         this->game[x][y] = num;
     }

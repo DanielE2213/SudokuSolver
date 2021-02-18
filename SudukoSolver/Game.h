@@ -7,6 +7,7 @@ class Game
 public:
 	//Constructor
 	Game(int* arr);
+	Game(Game* g);
 	Game();
 	//returns the game as a 2d vector
 	std::vector<std::vector<int>> getGame();
